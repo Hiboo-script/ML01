@@ -23,7 +23,7 @@ class Recipe:
 				raise ValueError("typeError : all ingredients must be a <str> !")
 			elif not isinstance(recipe_type,str):
 				raise ValueError("typeError : recipe type must be a <str> !")
-			elif not recipe_type in {"stiarter","lunch","dessert"}:
+			elif not recipe_type in {"starter","lunch","dessert"}:
 				raise ValueError("valueError : recipe_type must be 'starter', 'lunch' or 'dessert' !")
 			elif not isinstance(description, str):
 				raise ValueError("typeError : description must be a <str> !")
@@ -38,4 +38,6 @@ class Recipe:
 			print(e)
 			quit()
 
-a = Recipe("Bourguignon",3,4,["salut","cachuete"],"lunch","djfkdslshdsljks")
+		def __str__(self):
+			recipe_txt = f"recipe : {recipe.name}"
+			return recipe_txt
