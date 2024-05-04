@@ -1,10 +1,11 @@
 from recipe import Recipe
+from book import Book
 import unittest
 
 
 class TestStringMethods(unittest.TestCase):
-
 	def test_nameRecipe(self):
+
 		with self.assertRaises(AttributeError):
 			yaourt = Recipe(78,3,20,["milk","berry"],"dessert","like in market")
 	
